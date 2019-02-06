@@ -44,7 +44,7 @@ Add django-planout-experiments's URL patterns:
 
     urlpatterns = [
         ...
-        url(r'^', include(planout_experiments_urls)),
+        url(r'^experiments/', include(planout_experiments_urls)),
         ...
     ]
 
@@ -53,8 +53,11 @@ Features
 
 * Allows creation of Experiment model with admin definable Goals
 * Includes models for tracking events that take place related to users under test
-* Allows designing experimental groups using [Facebook's Planout Library](https://facebook.github.io/planout/)
+* Allows designing experimental groups using Facebook's Planout Library[1]
 
+  .. [1] https://facebook.github.io/planout/
+
+  
 Running Tests
 -------------
 
