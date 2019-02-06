@@ -25,7 +25,10 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
+    "django.contrib.admin",
     "django_extensions",
+    "wagtail.core",
+    'wagtail.sites',
     "planout_experiments",
 ]
 

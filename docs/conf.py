@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+import django
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -21,6 +22,11 @@ import sys, os
 cwd = os.getcwd()
 parent = os.path.dirname(cwd)
 sys.path.append(parent)
+
+sys.path.insert(0, os.path.abspath('../planout_experiments'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
+django.setup()
+
 
 import planout_experiments
 

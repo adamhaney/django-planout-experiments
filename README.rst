@@ -51,7 +51,9 @@ Add django-planout-experiments's URL patterns:
 Features
 --------
 
-* TODO
+* Allows creation of Experiment model with admin definable Goals
+* Includes models for tracking events that take place related to users under test
+* Allows designing experimental groups using [Facebook's Planout Library](https://facebook.github.io/planout/)
 
 Running Tests
 -------------
