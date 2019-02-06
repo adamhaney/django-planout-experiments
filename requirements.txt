@@ -1,0 +1,10 @@
+django-model-utils>=2.0
+# Additional requirements go here
+Django==2.1.5
+PlanOut==0.6.0
+psycopg2-binary==2.7.7
+pytz==2018.9
+six==1.12.0
+structlog==19.1.0
+django-extensions==2.1.5
+django-simple-history==2.7.0

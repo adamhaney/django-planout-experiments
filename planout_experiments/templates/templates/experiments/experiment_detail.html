@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+{% block content %}
+<h1>{{ object.name }}</h1>
+{% for goal, results in object.get_goal_results %}
+<h2>{{ goal.name }}</h2>
+<table>
+    <tr>
+        <td>Variation Key</td>
+        <td>Variation Value</td>
+        <td>Num Exposures</td>
+        <td>Success Value</td>
+        <td>Success Rate</td>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{ result.variation.key }}</td>
+        <td>{{ result.variation.value }}</td>
+        <td>{{ result.variation.num_exposures }}</td>
+        <td>{{ result.variation.succes_value }}</td>
+        <td>{{ result.variation.success_percentage }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+{% endblock %}
+{% block download-section %}
+{% endblock %}
+

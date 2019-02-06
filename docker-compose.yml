@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: mdillon/postgis:10
+    environment:
+      POSTGRES_PASSWORD: 'testpassword'
+  web:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - .:/code
+    ports:
+      - "5678:8000"
+    depends_on:
+      - db
+    command: ["python", "/code/manage.py", "runserver", "0:8000"]

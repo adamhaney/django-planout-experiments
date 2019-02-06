@@ -1,0 +1,5 @@
+bumpversion==0.5.3
+wheel==0.30.0
+django-model-utils>=2.0
+sphinxcontrib-websupport==1.1.0
+Sphinx==1.8.4
